@@ -1,0 +1,21 @@
+{application, contentapi,
+ [
+  {description, "News Content API "},
+  {vsn, "0.1"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  goldrush,
+                  lager,
+                  cowboy,
+                  jsx,
+                  ibrowse,
+                  erlydtl
+                 ]},
+  {mod, { contentapi_app, []}},
+  {env, [{http_port, 6789},
+  		 {max_connections, 2048}
+  		]}
+ ]}.
